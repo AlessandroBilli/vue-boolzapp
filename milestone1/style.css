@@ -4,6 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header{
+    height: 4.25rem;
+    
+    
+    
+}
+
+header img {
+    border-radius: 2.4375rem;
+}
 /* #endregion RESET*/
 
 body{
@@ -27,12 +38,13 @@ body{
 
 .contacts{
     width: 482px; 
-    background-color: green;
+    background-color:#eaeaea;
     height: 100%;
 }
 
 .chat {
     width: 902px; 
-    background-color: blue;
+    background-color:#eaeaea;
     height: 100%;
+    
 }
