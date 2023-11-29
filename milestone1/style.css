@@ -25,4 +25,14 @@ body{
     background-color: red;
 }
 
+.contacts{
+    width: 482px; 
+    background-color: green;
+    height: 100%;
+}
 
+.chat {
+    width: 902px; 
+    background-color: blue;
+    height: 100%;
+}
