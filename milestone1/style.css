@@ -1,0 +1,16 @@
+/* #region RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* #endregion RESET*/
+
+body{
+    background-color:#d9dbd6 ;
+}
+.green-rettangle{
+
+    height: 7.625rem;
+    background-color:#009788 ;
+}
