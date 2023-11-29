@@ -10,7 +10,19 @@ body{
     background-color:#d9dbd6 ;
 }
 .green-rettangle{
-
+    
     height: 7.625rem;
     background-color:#009788 ;
+    
 }
+
+.main-content{
+    
+    height: 49.375rem;
+    width: 86.875rem;
+    margin: auto;
+    margin-top: 1.25rem;
+    background-color: red;
+}
+
+
