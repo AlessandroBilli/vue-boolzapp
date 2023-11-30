@@ -12,8 +12,13 @@ header{
     
 }
 
-header img {
+header img,li div img {
     border-radius: 2.4375rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
 }
 /* #endregion RESET*/
 
@@ -48,3 +53,24 @@ body{
     height: 100%;
     
 }
+
+ .fa-bell-slash{
+    
+    
+    background-color: white;
+}
+ 
+.notifiche{
+    height:4.25rem; 
+    width: 100%;
+    
+    background-color: #8edafc;
+    
+}
+
+.avatar{
+    height:4.25rem ;
+    
+}
+
+

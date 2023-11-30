@@ -21,7 +21,7 @@
 <body>
 
 
-    <div id="app v-cloak">
+    <div id="app" v-cloak>
 
         <div class="green-rettangle d-flex">
 
@@ -46,6 +46,34 @@
 
 
                         </header>
+
+
+                        <main class="d-flex flex-column">
+                            <section>
+                                <div class="notifiche container d-flex align-items-center ">
+                                    <i class="fa-solid fa-bell-slash "></i>
+                                    <div class="text-center  m-2">Ricevi notifiche di nuovi messaggi</div>
+                                    <a href="#">ddd</a>
+                                </div>
+                            </section>
+
+                            <section>
+                                <div class="contacts-container">
+                                    <ul>
+                                        <li class="contacts-list " v-for="contact in contacts" :key="contact.name">
+                                            <div class="avatar d-flex ">
+
+                                                <img :src="contact.avatar" :alt="`Immagine di ${contact.name}`" />
+                                                <div>{{ contact.name }}</div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+
+
+                        </main>
                     </div>
                     <div class=" chat col-4">
                         <header class="d-flex justify-content-between">
@@ -58,8 +86,11 @@
                                 <i role="button" class="fa-solid fa-message m-1"></i>
                                 <i role="button" class="fa-solid fa-ellipsis-vertical m-1"></i>
                             </div>
+                        </header>
 
-                            
+                        <main>
+
+                        </main>
                     </div>
 
 
@@ -77,8 +108,8 @@
 
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
 
 </html>
