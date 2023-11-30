@@ -73,4 +73,19 @@ body{
     
 }
 
+.main-chat{
+    background-image:url(/milestone1/img/mine.jpg);
+    height: 91%;
+    
+}
 
+.message-bar{
+    width: 100%;
+    background-color:#f3eeea;
+}
+
+.fa-microphone, 
+.fa-face-smile {
+    width: .9375rem;
+    height: .9375rem;
+}

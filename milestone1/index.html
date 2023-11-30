@@ -48,7 +48,7 @@
                         </header>
 
 
-                        <main class="d-flex flex-column">
+                        <main class=" main-contacts d-flex flex-column">
                             <section>
                                 <div class="notifiche container d-flex align-items-center ">
                                     <i class="fa-solid fa-bell-slash "></i>
@@ -88,8 +88,16 @@
                             </div>
                         </header>
 
-                        <main>
-
+                        <main class="main-chat position-relative">
+                            <div class=" container chat-background ">
+                                
+                                <div class="message-bar d-flex position-absolute bottom-0 start-50 translate-middle-x">
+                                    <i role="button" class="fa-regular fa-face-smile mt-2 m-2"></i>
+                                    <input type="text" placeholder="Scrivi un messaggio" class="form-control" v-model="newMessage" @keyup.enter="sendMessage">
+                                    <i role="button" class="fa-solid fa-microphone mt-2 m-2"></i>
+                                    
+                                </div>
+                            </div>
                         </main>
                     </div>
 
