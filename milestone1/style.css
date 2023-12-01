@@ -90,9 +90,10 @@ body{
 }
 
 
-.message{
+.message-list{
 
     background-color: white;
     max-width: 19.5rem;
     max-height: 2.625rem;
+    border-radius: 2rem;
 }

@@ -13,93 +13,102 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Open+Sans:wght@300;400;600;700;800&family=PT+Sans&family=Playfair+Display&family=Roboto:wght@100;400&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Carter+One&family=Open+Sans:wght@300;400;600;700;800&family=PT+Sans&family=Playfair+Display&family=Roboto:wght@100;400&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
     <div id="app" v-cloak>
-        
-            <div class="container main-content d-flex">
-                <div class="row">
-                    <!--Elenco contatti-->
 
-                    <!--Info se stessi e barra notifiche-->
-                    <div class="contacts col">
-                        <header class="d-flex justify-content-between">
-                            <div class="profile d-flex ">
-                                <img class="mt-1" src="img/avatar_2.jpg" alt="">
-                                <div class="text-center mt-4 m-2">Alessandro Billi</div>
-                            </div>
-                            <div class="feature d-flex align-items-center ">
-                                <i role="button" class="fa-solid fa-circle-notch m-1"></i>
-                                <i role="button" class="fa-solid fa-message m-1"></i>
-                                <i role="button" class="fa-solid fa-ellipsis-vertical m-1"></i>
-                            </div>
-                        </header>
-                        <!--/Info se stessi e barra notifiche-->
-                        <main class=" main-contacts d-flex flex-column">
-                            <section>
-                                <div class="notifiche container d-flex align-items-center ">
-                                    <i class="fa-solid fa-bell-slash "></i>
-                                    <div class="text-center  m-2">Ricevi notifiche di nuovi messaggi</div>
-                                    <a href="#">Attiva notifiche desktop</a>
-                                </div>
-                                <input class="form-control  me-2 mt-2"  type="search" placeholder="Cerca o inizia una nuova chat" aria-label="Search">
-                            </section>
-                            <section>
-                                <div class="contacts-container">
-                                    <ul>
-                                      <li class="contacts-list" v-for="contact in contacts" :key="contact.name" @click="selectContact(contact)">
-                                        <div class="avatar d-flex">
-                                          <img :src="contact.avatar" :alt="`Immagine di ${contact.name}`" />
-                                          <div>{{ contact.name }}</div>
-                                        </div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                            </section>
-                        </main>
-                    </div> <!--/Elenco contatti-->
-                    <div class=" chat col-4"> <!--Chat Boolzapp-->
-                        <div v-if="selectedContact" class="chat col-4">
-                            <header class="d-flex justify-content-between"> <!--Contatto info-->
-                                <div class="profile d-flex">
-                                    <img class="mt-1" :src="selectedContact.avatar" :alt="selectedContact.name">
-                                    <div class="text-center mt-4 m-2">{{ selectedContact.name }}</div>
-                                </div>
-                                <!--/Contatto info-->
-                            </header>
-                            <main class="main-chat position-relative">
-                                <!--Chat contatti-->
-                                <div class="container chat-background">
-                                   
-                                    <div class="message-list">
-                                        
-                                        <div v-for="message in selectedContact.messages" :key="message.date">
-                                            
-                                            
-                                            <div class="message">{{ message.date }}</div>
-                                            <div class="message">{{ message.message }}</div>
-                                            
-                                        </div>
-                                    </div>  <!--/Chat contatti-->
-                                    <!--Parte scrittura messaggio -->
-                                    <div class="message-bar d-flex position-absolute bottom-0 start-50 translate-middle-x">
-                                        <i role="button" class="fa-regular fa-face-smile mt-2 m-2"></i>
-                                        <input type="text" placeholder="Scrivi un messaggio" class="form-control" v-model="newMessage" @keyup.enter="sendMessage">
-                                        <i role="button" class="fa-solid fa-microphone mt-2 m-2"></i>
-                                    </div>
-                                    <!--Parte scrittura messaggio -->
-                                </div>
-                            </main>
+        <div class="container main-content d-flex">
+            <div class="row">
+                <!--Elenco contatti-->
+
+                <!--Info se stessi e barra notifiche-->
+                <div class="contacts col">
+                    <header class="d-flex justify-content-between">
+                        <div class="profile d-flex ">
+                            <img class="mt-1" src="img/avatar_2.jpg" alt="">
+                            <div class="text-center mt-4 m-2">Alessandro Billi</div>
                         </div>
+                        <div class="feature d-flex align-items-center ">
+                            <i role="button" class="fa-solid fa-circle-notch m-1"></i>
+                            <i role="button" class="fa-solid fa-message m-1"></i>
+                            <i role="button" class="fa-solid fa-ellipsis-vertical m-1"></i>
+                        </div>
+                    </header>
+                    <!--/Info se stessi e barra notifiche-->
+                    <main class=" main-contacts d-flex flex-column">
+                        <section>
+                            <div class="notifiche container d-flex align-items-center ">
+                                <i class="fa-solid fa-bell-slash "></i>
+                                <div class="text-center  m-2">Ricevi notifiche di nuovi messaggi</div>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                            <input class="form-control  me-2 mt-2" type="search"
+                                placeholder="Cerca o inizia una nuova chat" aria-label="Search">
+                        </section>
+                        <section>
+                            <div class="contacts-container">
+                                <ul>
+                                    <li class="contacts-list" v-for="contact in contacts" :key="contact.name"
+                                        @click="selectContact(contact)">
+                                        <div class="avatar d-flex">
+                                            <img :src="contact.avatar" :alt="`Immagine di ${contact.name}`" />
+                                            <div>{{ contact.name }}</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </main>
+                </div> <!--/Elenco contatti-->
+                <div class=" chat col-4"> <!--Chat Boolzapp-->
+                    <div v-if="selectedContact" class="chat col-4">
+                        <header class="d-flex justify-content-between"> <!--Contatto info-->
+                            <div class="profile d-flex ">
+                                <img class="mt-1" :src="selectedContact.avatar" :alt="selectedContact.name">
+                                <div class="text-center mt-4 m-2 ">{{ selectedContact.name }} </div>
+
+                               <!--  <div>
+                                    <i role="button" class="fa-solid fa-paperclip m-1"></i>
+                                    <i role="button" class="fa-solid fa-magnifying-glass m-1"></i>
+                                    <i role="button" role="button" class="fa-solid fa-ellipsis-vertical m-1"></i>
+                                </div>
+ -->
+                            </div>
+                            <!--/Contatto info-->
+                        </header>
+                        <main class="main-chat position-relative">
+                            <!--Chat contatti-->
+                            <div class="container chat-background">
+
+                                <div class="message-list text-center">
+
+                                    <div v-for="message in selectedContact.messages" :key="message.date">
+                                        <p v-if="message.status === 'received'">{{ message.message }}</p>
+                                    </div>
+                                    
+                                </div> <!--/Chat contatti-->
+                                <!--Parte scrittura messaggio -->
+                                <div class="message-bar d-flex position-absolute bottom-0 start-50 translate-middle-x">
+                                    <i role="button" class="fa-regular fa-face-smile mt-2 m-2"></i>
+                                    <input type="text" placeholder="Scrivi un messaggio" class="form-control"
+                                        v-model="newMessage" @keyup.enter="sendMessage">
+                                    <i role="button" class="fa-solid fa-microphone mt-2 m-2"></i>
+                                </div>
+                                <!--Parte scrittura messaggio -->
+                            </div>
+                        </main>
                     </div>
                 </div>
             </div>
-        
+        </div>
+
     </div>
     <script type="module" src="main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
+
 </html>
