@@ -94,6 +94,38 @@ body{
 
     background-color: white;
     max-width: 19.5rem;
-    max-height: 2.625rem;
+    max-height: 100%;
     border-radius: 2rem;
+    
+}
+
+
+
+.sent-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.sent-bubble {
+    background-color: #DCF8C6; 
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #000; 
+    max-width: 70%; 
+}
+
+
+.received-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.received-bubble {
+    background-color: #F0F0F0;  
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #000; 
+    max-width: 70%;
 }

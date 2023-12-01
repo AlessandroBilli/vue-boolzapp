@@ -57,8 +57,7 @@ createApp({
               date: '28/03/2020 10:10:40',
               message: 'La Marianna va in campagna',
               status: 'received'
-            },
-            
+            }
           ],
         },
         {
@@ -136,25 +135,42 @@ createApp({
         },
       ],
 
-      selectedContact: null
+      selectedContact: null,
+      newMessage: '' ,
     };
-
-
-
-    
-
-
-
-
-
-
   },
-
   methods: {
-    
     selectContact(contact) {
       this.selectedContact = contact;
-      console.log("Agg cliccato")
+      console.log("Contatto selezionato:", contact);
+    },
+
+    sendMessage() {
+      if (this.newMessage.trim() === '') return;
+
+      const currentDate = new Date().toLocaleString();
+      const newSentMessage = {
+        date: currentDate,
+        message: this.newMessage,
+        status: 'sent'
+      };
+
+      this.selectedContact.messages.push(newSentMessage);
+      console.log("Messaggio inviato:", newSentMessage);
+
+      setTimeout(() => {
+        const currentDate = new Date().toLocaleString();
+        const newReceivedMessage = {
+          date: currentDate,
+          message: 'Ok',
+          status: 'received'
+        };
+
+        this.selectedContact.messages.push(newReceivedMessage);
+        console.log("Risposta inviata:", newReceivedMessage);
+      }, 2000);
+
+      this.newMessage = ''; 
     }
   }
 }).mount("#app");
