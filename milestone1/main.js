@@ -133,8 +133,28 @@ createApp({
               status: 'sent'
             }
           ]
-        }
+        },
       ],
+
+      selectedContact: null
     };
+
+
+
+    
+
+
+
+
+
+
   },
+
+  methods: {
+    
+    selectContact(contact) {
+      this.selectedContact = contact;
+      console.log("Agg cliccato")
+    }
+  }
 }).mount("#app");

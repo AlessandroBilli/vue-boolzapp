@@ -88,3 +88,11 @@ body{
     width: .9375rem;
     height: .9375rem;
 }
+
+
+.message{
+
+    background-color: white;
+    max-width: 19.5rem;
+    max-height: 2.625rem;
+}
