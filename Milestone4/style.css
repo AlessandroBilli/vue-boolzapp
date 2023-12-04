@@ -1,0 +1,131 @@
+/* #region RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 4.25rem;
+    
+    
+    
+}
+
+header img,li div img {
+    border-radius: 2.4375rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+/* #endregion RESET*/
+
+body{
+    background: linear-gradient(to top, #dcdbd2 85%, #009788 15%  ) ;
+    height: 100vh;
+}
+
+
+.main-content{
+    
+    height: 49.375rem;
+    width: 86.875rem;
+    margin: auto;
+    margin-top: 1.25rem;
+    background-color: red;
+}
+
+.contacts{
+    width: 482px; 
+    background-color:#eaeaea;
+    height: 100%;
+}
+
+.chat {
+    width: 902px; 
+    background-color:#eaeaea;
+    height: 100%;
+    
+}
+
+ .fa-bell-slash{
+    
+    
+    background-color: white;
+}
+ 
+.notifiche{
+    height:4.25rem; 
+    width: 100%;
+    padding: 0;
+    
+    background-color: #8edafc;
+    
+}
+
+
+
+.avatar{
+    height:4.25rem ;
+    
+}
+
+.main-chat{
+    background-image:url(/Milestone4/img/mine.jpg);
+    height: 91%;
+    
+}
+
+.message-bar{
+    width: 100%;
+    background-color:#f3eeea;
+}
+
+.fa-microphone, 
+.fa-face-smile {
+    width: .9375rem;
+    height: .9375rem;
+}
+
+
+.message-list{
+
+    background-color: white;
+    max-width: 19.5rem;
+    max-height: 100%;
+    border-radius: 2rem;
+    
+}
+
+
+
+.sent-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.sent-bubble {
+    background-color: #DCF8C6; 
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #000; 
+    max-width: 70%; 
+}
+
+
+.received-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.received-bubble {
+    background-color: #F0F0F0;  
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #000; 
+    max-width: 70%;
+}

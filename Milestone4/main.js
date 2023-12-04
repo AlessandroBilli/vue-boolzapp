@@ -137,7 +137,7 @@ createApp({
 
       selectedContact: null,
       newMessage: '' ,
-      
+   
     };
   },
   methods: {
@@ -145,7 +145,7 @@ createApp({
       this.selectedContact = contact;
       console.log("Contatto selezionato:", contact);
     },
-    
+
 
     sendMessage() {
       if (this.newMessage.trim() === '') return;
