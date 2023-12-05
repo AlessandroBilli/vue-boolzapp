@@ -115,6 +115,7 @@ body{
     background-color: #DCF8C6; 
     padding: 8px 12px;
     border-radius: 10px;
+    margin: 1.25rem;
     color: #000; 
     max-width: 70%; 
 }
@@ -124,17 +125,16 @@ body{
     display: flex;
     justify-content: flex-start;
     margin-bottom: 8px;
+    
 }
 
 .received-bubble {
     background-color: #F0F0F0;  
     padding: 8px 12px;
     border-radius: 10px;
+    margin: 1.25rem;
     color: #000; 
     max-width: 70%;
 }
 
 
-.dropdown-toggle{
-    background-color: none;
-}
