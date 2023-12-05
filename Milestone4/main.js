@@ -17,7 +17,8 @@ createApp({
             {
               date: '10/01/2020 15:50:00',
               message: 'Ricordati di stendere i panni',
-              status: 'sent'
+              status: 'sent',
+              showDropdown: false,
             },
             {
               date: '10/01/2020 16:15:22',
@@ -137,15 +138,22 @@ createApp({
 
       selectedContact: null,
       newMessage: '' ,
+      searchTerm: '', 
    
     };
   },
+
+  
+
+
   methods: {
     selectContact(contact) {
       this.selectedContact = contact;
       console.log("Contatto selezionato:", contact);
     },
 
+  
+    
 
     sendMessage() {
       if (this.newMessage.trim() === '') return;
@@ -173,6 +181,16 @@ createApp({
       }, 2000);
 
       this.newMessage = ''; 
-    }
+    },
+
+    filteredContacts() {
+      if (this.searchTerm.trim() !== '') {
+        return this.contact.filter(contact =>
+          contact.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+        );
+      } else {
+        return this.contacts;
+      }
+    },
   }
 }).mount("#app");

@@ -52,8 +52,12 @@ body{
 
  .fa-bell-slash{
     
-    
+    padding: .9375rem;
     background-color: white;
+    border-radius: 2.4375rem;
+    color:  #8edafc;
+    margin: .3125rem;
+    
 }
  
 .notifiche{
@@ -128,4 +132,9 @@ body{
     border-radius: 10px;
     color: #000; 
     max-width: 70%;
+}
+
+
+.dropdown-toggle{
+    background-color: none;
 }
